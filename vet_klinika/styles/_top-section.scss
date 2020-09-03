@@ -1,0 +1,175 @@
+@use 'header';
+@use 'size';
+@use 'vars';
+
+.top-section-container {
+  position: relative;
+}
+
+.top-section {
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  height: 100vh;*/
+  
+
+  width: 100%;
+  height:auto;
+  min-height: 100vh;
+
+  position: relative;
+  background-image: linear-gradient(0deg, rgba(33, 118, 247, 0.2), rgba(0, 100, 255, 0.2)), url(../img/top-section-image-1.svg);
+  background-size:cover;
+  background-position: 60% 67%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  
+}
+
+
+.top-section-info-container {
+  padding: 0px 84px 48px;
+  max-width: 100%;
+  h1 {
+    font-size: 5.5em;
+    color: vars.$white;
+    font-weight: 800;
+  }
+
+  p {
+    color: vars.$white;
+    font-size: 3em;
+  }
+
+  .top-section-subtitle {
+    margin-top: size.$medium;
+  }
+}
+
+.appointment-button-container {
+  margin-top: 30px;
+}
+
+.appointment-button {
+  color: vars.$dark;
+  cursor: pointer;
+  font-size: size.$medium;
+  border-radius: 15px;
+  opacity: .8;
+  background: vars.$light-blue-1;
+  border: none;
+  font-family: vars.$regular-family;
+  font-weight: 600;
+  padding: size.$medium size.$large-2;
+}
+
+.links-container {
+  position: fixed;
+  padding-right: 10px;
+  right: 0;
+  bottom: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+}
+  /*a {
+    opacity: .9;
+  }*/
+
+  .links-container.active{
+    bottom:32px;
+    pointer-events: auto;
+     opacity:1;
+  }
+
+
+
+@media (max-width: size.$tablet-width) {
+  .top-section-info-container {
+    padding-left: 0;
+    padding-right: 0;
+    h1 {
+      font-size: 5em;
+      color: vars.$white;
+      font-weight: 800;
+    }
+  }
+}
+
+@media (max-width: size.$mobile-width) {
+  .links-container {
+    display: none;
+    
+  }
+
+  .top-section-subtitle {
+    display: none;
+  }
+
+  .top-section-title {
+    h1 {
+      font-size: 2.7em;
+      text-align: center;
+      line-height: 1,5;
+      letter-spacing: 1px;
+    }
+  }
+
+  .top-section-info-container {
+    padding-top: size.$large;
+    padding-bottom: 150px;
+    
+    .appointment-button-container {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: size.$mobile-small){
+
+  .links-container {
+    display: none;
+    
+  }
+
+  .top-section-subtitle {
+    display: none;
+  }
+
+  .top-section-title {
+    h1 {
+      font-size: 1.7em;
+      text-align: center;
+      line-height: 1,5;
+      letter-spacing: 1px;
+    }
+  }
+
+  .top-section-info-container {
+    padding-top: 190px;
+    padding-bottom: 150px;
+    
+    .appointment-button-container {
+      text-align: center;
+    }
+
+    .appointment-button {
+      color: vars.$dark;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 15px;
+      opacity: .8;
+      background: vars.$light-blue-1;
+      border: none;
+      font-family: vars.$regular-family;
+      font-weight: 600;
+      padding: size.$medium size.$large-2;
+    }
+  }
+}
