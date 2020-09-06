@@ -144,6 +144,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
 }
 
+.navbar-toggler-icon {
+  background-image: vet_huinya/icons/burger;
+}
+
 nav.site-nav a {
   transition: color 0.1s ease-in-out;
   margin-left: 8px;
@@ -337,7 +341,7 @@ nav.site-nav a:hover::after {
   }
 
   .top-section-info-container {
-    padding-top: 190px;
+    padding-top: 100px;
     padding-bottom: 150px;
   }
   .top-section-info-container .appointment-button-container {
@@ -1148,6 +1152,7 @@ article h1 {
 }
 
 .article-doctor {
+  padding-top: 2rem;
   height: auto;
   width: 80%;
 }
